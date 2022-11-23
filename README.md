@@ -34,7 +34,7 @@
     <img src="public/favicon.ico" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">Budget Calculator</h3>
+<h3 align="center">Budget Calculator(Work in progress)</h3>
 
   <p align="center">
     A budgeting calculator. Intended for those who struggle with finances.
