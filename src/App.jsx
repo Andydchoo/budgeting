@@ -1,4 +1,5 @@
 import './App.css';
+import React from "react";
 import { theme } from "./styles/styles.jsx";
 import { ThemeProvider } from "@mui/material";
 import Navbar from "./components/navbar/Navbar.jsx";

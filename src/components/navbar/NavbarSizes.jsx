@@ -1,9 +1,6 @@
 import * as React from 'react';
-import { Button, Grid, Container, AppBar, Box, Toolbar, Typography, IconButton, Menu, MenuItem} from '@mui/material';
+import { Button, AppBar, Box, Toolbar, Typography, IconButton} from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import AccountBoxIcon from '@mui/icons-material/AccountBox';
-import CodeIcon from '@mui/icons-material/Code';
-import DescriptionIcon from '@mui/icons-material/Description';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import MenuIcon from '@mui/icons-material/Menu';
 import SavingsIcon from '@mui/icons-material/Savings';
