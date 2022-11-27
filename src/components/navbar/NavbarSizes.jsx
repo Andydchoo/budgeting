@@ -8,7 +8,7 @@ import SavingsIcon from '@mui/icons-material/Savings';
 export function NavbarDesktop() {
     return (
         <Box sx={{ flexGrow: 1 }}>
-          <AppBar position="static">
+          <AppBar position="fixed">
             <Toolbar 
               style={{
                 backgroundColor: '#DEF2F0',

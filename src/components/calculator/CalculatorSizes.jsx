@@ -1,10 +1,23 @@
 //To-do
-  //Fixing the useStates to update instantly
-  //Add an animated pie chart graph to visually show budget
-import React, { useState } from 'react';
+  // Resolved: Fixing the useStates to update instantly
+
+  // Resolved: an animated pie chart graph to visually show budget
+    //-Event handler and data dont like eachother. Income+expenses dont display properly on piechart
+    //Datatype for value of eventHandlers isnt same as wants+savings
+
+  // Style the chart
+    // Add different colors for each slice in piechart
+    // Add title
+    // Label the chart and its values
+    // Make it larger
+
+  // Build mobile variant
+  // 
+import React, { useState, useEffect } from 'react';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { Button, Grid, Card, CardActions, CardContent, Typography, InputAdornment, OutlinedInput, InputLabel, TextField} from '@mui/material';
 import { AccountBoxIcon, CodeIcon, DescriptionIcon, LinkedInIcon, GitHubIcon, MenuIcon, MailIcon } from '@mui/icons-material';
+import { PieChart, Pie, Legend, Tooltip, } from "recharts";
 
 // Desktop variant of calculator component
 export function CalculatorDesktop() {
@@ -13,19 +26,40 @@ export function CalculatorDesktop() {
     const [wants, setWants] = useState(0)
     const [income, setIncome] = useState(0)
     const [counter, setCounter] = useState(0)
+    const [income01, setIncome01] = useState(0)
+    const [expenses01, setExpenses01] = useState(0)
 
+    //Issue with the event handler and the data. Income and expenses wont properly update on piechart
+    const data =[
+      {name: "income", value: income01},
+      {name: "savings", value: savings},
+      {name: "expenses", value: expenses01},
+      {name: "wants", value: wants},
+    ]
+    //Event handler for income inputbox
     const handleIncome = event => {
       setIncome(event.target.value);
       console.log('income: ', event.target.value);
     };
-
+    //Event handler for expenses inputbox
     const handleExpenses = event => {
       setExpenses(event.target.value);
       console.log('expense: ', event.target.value);
     };
 
+    //Forcing the state to update
+    useEffect(() =>{
+        calculateBudget()
+      }, [counter] )
+
     function calculateBudget() {
-      setCounter(income-expenses)
+      setCounter( prevCounter => income-expenses )
+      //Using seperate objects to avoid live updating of piechart
+      //when typing into textboxes after generation
+
+      //Turning the new objects into new datatypes to work with piechart
+      setExpenses01(prevExpenses01 => (expenses) - 0 )
+      setIncome01(prevIncome01 => (income) - 0 )
 
       if ((counter) >= expenses) {
         console.log("rich");
@@ -47,11 +81,10 @@ export function CalculatorDesktop() {
           container
           direction="column"
           alignItems="center"
-          padding={10}
+          padding={15}
           spacing={5}
           sx={{ 
             backgroundColor: '#14365D', 
-            height: '100vh', 
             color: '#DEF2F0',
           }}
         >
@@ -61,14 +94,10 @@ export function CalculatorDesktop() {
               Calculator
             </Typography>
           </Grid>
-
           {/* Card containing input fields for calculator */}
           <Grid item>
             <Card sx={{ minWidth: 600, maxWidth: 1000, backgroundColor: '#DEF2F0' }}>
               <CardContent sx={{ display: 'flex', flexDirection: 'column' }}>
-                {/* <Typography variant="h5" color="black" gutterBottom>
-                  How much do you make a month?
-                </Typography> */}
                 <Typography variant="h4">
                   How much do you make in a month?
                 </Typography>
@@ -82,7 +111,7 @@ export function CalculatorDesktop() {
                   onChange={handleIncome}
                 />
                 <Typography variant="h4">
-                  How much are your monthly expenses?
+                  What are your monthly expenses?
                 </Typography>
                 <InputLabel htmlFor="outlined-adornment-amount">Monthly expenses:</InputLabel>
                 <OutlinedInput
@@ -107,6 +136,26 @@ export function CalculatorDesktop() {
                 </Button>
               </CardActions>
             </Card>
+          </Grid>
+
+          <Grid item >
+          <Card sx={{ backgroundColor: '#DEF2F0' }}>
+            <CardContent >
+              <PieChart width={400} height={400}>
+                <Pie
+                  dataKey="value"
+                  isAnimationActive={false}
+                  data={data}
+                  cx="50%"
+                  cy="50%"
+                  outerRadius={80}
+                  fill="#3A8E88"
+                  label
+                />
+                <Tooltip />
+              </PieChart>
+            </CardContent>
+          </Card>
           </Grid>
         </Grid>
     )
