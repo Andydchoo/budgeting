@@ -4,6 +4,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import MenuIcon from '@mui/icons-material/Menu';
 import SavingsIcon from '@mui/icons-material/Savings';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 export function NavbarDesktop() {
     return (
@@ -21,7 +22,7 @@ export function NavbarDesktop() {
                 sx={{ mr: 1 }}
                 >
                   <SavingsIcon sx={{ fontSize: '40px', color: '#3A8E88'}}/>
-                </IconButton>
+              </IconButton>
               <Typography
                 variant="h5"
                 noWrap
@@ -38,23 +39,6 @@ export function NavbarDesktop() {
               >
                 Budget Calculator
               </Typography>
-              <Box>
-                <Button color="inherit" sx={{ padding: '20px' }}>
-                  <Typography variant="h6">
-                    Button1
-                  </Typography>
-                </Button>
-                <Button color="inherit" sx={{ padding: '20px' }}>
-                  <Typography variant="h6">
-                    Button2
-                  </Typography>
-                </Button>
-                <Button color="inherit" sx={{ padding: '20px' }}>
-                  <Typography variant="h6">
-                    Button3
-                  </Typography>
-                </Button>
-              </Box>
             </Toolbar>
           </AppBar>
         </Box>
@@ -64,26 +48,36 @@ export function NavbarDesktop() {
 export function NavbarMobile() {
     return(
         <Box sx={{ flexGrow: 1 }}>
-          <AppBar position="static">
+          <AppBar position="fixed">
             <Toolbar
               style={{
-                backgroundColor: '#b6c199',
+                backgroundColor: '#DEF2F0',
+                color: '#14365d'
               }}>
               <IconButton
                 size="large"
                 edge="start"
-                color="inherit"
                 aria-label="menu"
-                sx={{ mr: 2 }}
+                sx={{ mr: 1 }}
               >
-                <MenuIcon />
+                <SavingsIcon sx={{ fontSize: '40px', color: '#3A8E88'}}/>
               </IconButton>
-              <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+              <Typography
+                variant="h5"
+                noWrap
+                component="a"
+                href="/"
+                sx={{
+                mr: 2,
+                display: { xs: 'none', md: 'flex' },
+                fontFamily: 'monospace',
+                fontWeight: 800,
+                color: '#3A8E88',
+                textDecoration: 'none',
+                }}
+              >
                 Budget Calculator
               </Typography>
-              <Button color="inherit">
-                <GitHubIcon />
-              </Button>
             </Toolbar>
           </AppBar>
         </Box>
