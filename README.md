@@ -34,7 +34,7 @@
     <img src="public/favicon.ico" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">Budget Calculator(Work in progress)</h3>
+<h3 align="center">Budget Calculator</h3>
 
   <p align="center">
     A budgeting calculator. Intended for those who struggle with finances.
@@ -93,6 +93,7 @@
 
 * [![React][React.js]][React-url]
 * [![Mui][Mui]][mui-url]
+* [![<Recharts />][Recharts]][Recharts-url]
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -142,9 +143,10 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Fluid Design
-- [ ] Calculating Numbers
-- [ ] Graph animation on side
+- [x] Fluid Design
+- [x] Calculating Budget
+- [x] Pie Chart
+- [x] Mobile first design
 
 
 See the [open issues](https://github.com/andydchoo/budgeting/issues) for a full list of proposed features (and known issues).
@@ -203,8 +205,10 @@ Project Link: [https://github.com/andydchoo/budgeting](https://github.com/andydc
 [license-url]: https://github.com/andydchoo/budgeting/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/andychoo/
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: public\preview.jpg
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
 [MUI]: https://img.shields.io/badge/MUI-20232A?style=for-the-badge&logo=mui&logoColor=61DAFB
 [mui-url]: https://mui.com/
+[Recharts]: https://img.shields.io/badge/Recharts-20232A?style=for-the-badge&logo=rechart&logoColor=61DAFB
+[Recharts-url]: https://recharts.org/
