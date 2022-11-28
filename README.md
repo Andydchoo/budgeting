@@ -83,7 +83,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]](https://github.com/Andydchoo/budgeting)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -205,7 +205,7 @@ Project Link: [https://github.com/andydchoo/budgeting](https://github.com/andydc
 [license-url]: https://github.com/andydchoo/budgeting/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/andychoo/
-[product-screenshot]: public\preview.jpg
+[product-screenshot]: https://media.discordapp.net/attachments/468853546037805058/1046929267956666368/preview.jpg?width=881&height=448
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
 [MUI]: https://img.shields.io/badge/MUI-20232A?style=for-the-badge&logo=mui&logoColor=61DAFB
