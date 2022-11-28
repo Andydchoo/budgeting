@@ -132,7 +132,7 @@ This is an example of how to list things you need to use the software and how to
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Enter in your monthly income and monthly expenses, then press "Calculate". Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Enter in your monthly income and monthly expenses, then press "Calculate" to get a suggestion on how to budget your money.
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
