@@ -97,7 +97,7 @@ export function CalculatorDesktop() {
         >
 
           <Grid item >
-            <Typography variant="h4" sx={{ display: 'flex', justifyContent: 'center', color: '#DEF2F0' }}>
+            <Typography variant="h4">
               Calculator
             </Typography>
           </Grid>
@@ -248,7 +248,7 @@ export function CalculatorMobile() {
         >
 
           <Grid item >
-            <Typography variant="h4" sx={{ display: 'flex', justifyContent: 'center', color: '#DEF2F0', paddingTop: '15%'}}>
+            <Typography variant="h4" sx={{ display: 'flex', justifyContent: 'center', paddingTop: '15%'}}>
               Calculator
             </Typography>
           </Grid>
